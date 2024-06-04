@@ -1,0 +1,59 @@
+{
+  "account": {
+    "huutai": 12345
+  },
+  "bedroom": {
+    "devices": {
+      "den": 0,
+      "loa": "59",
+      "maylanh": {
+        "dieuchinh": 28,
+        "status": 1
+      },
+      "quatmay": 0,
+      "tv": 0
+    },
+    "sensor": {
+      "anhsang": 90,
+      "doam": 80,
+      "gas": 0,
+      "nhietdo": 40
+    }
+  },
+  "kitchenroom": {
+    "devices": {
+      "bepdien": "1034",
+      "den": 1,
+      "loa": "74",
+      "maylanh": {
+        "dieuchinh": 23,
+        "status": 1
+      },
+      "quatmay": 0
+    },
+    "sensor": {
+      "anhsang": 70,
+      "doam": 35,
+      "gas": 20,
+      "nhietdo": 27
+    }
+  },
+  "livingroom": {
+    "devices": {
+      "den": 0,
+      "loa": "44",
+      "maylanh": {
+        "dieuchinh": 23,
+        "status": 0
+      },
+      "quatmay": 0,
+      "tv": 0
+    },
+    "sensor": {
+      "anhsang": 60,
+      "doam": 23,
+      "gas": 40,
+      "nhietdo": 29
+    }
+  }
+}

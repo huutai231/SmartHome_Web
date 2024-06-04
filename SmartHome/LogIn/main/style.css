@@ -1,0 +1,428 @@
+* {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+
+.app {
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     height: 100vh;
+}
+
+.header {
+     height: 10%;
+     width: 100%;
+     display: flex;
+     flex-direction: row; 
+     background-color: rgb(102, 102, 237);   
+}
+.header__left {
+     font-size: 30px;
+     display: flex;
+     align-items: center;
+     font-weight: 900;
+     padding-left: 20px;
+     height: 100%;
+     justify-content: flex-start;
+     width: 50%;
+}
+
+.header__right {
+     width: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     font-size: 38px;
+}
+.header--item {
+     padding: 16px;
+     margin-top: 5px;
+     font-weight: 900;
+}
+.header__time_icon--icon:hover {
+     cursor: pointer;
+}
+
+.header__account {
+     background-image: url(./imgs/account/avatar.png);
+     width: 50px;
+     height: 50px;
+     background-size: cover;
+     border-radius: 50%;
+} 
+.header__mode:hover {
+     cursor: pointer;
+}
+.header__mode.active {
+     color: rgb(185, 7, 7);
+}
+.content.mode_dark {
+     background-color: rgb(41, 39, 39);
+}
+.content.mode_dark .menu-item.active .menu-item__content {
+     background-color: rgb(41, 39, 39);
+     color: white;
+}
+.content.mode_dark .menu-item.active .menu-item__icon {
+     filter: invert(1);
+}
+.content.mode_dark .main-item__sensor__title {
+     color: white;
+}
+.content {
+     height: 87%;
+     width: 100%;
+     display: flex;
+}
+
+.content__menu {
+     width: 20%;
+     display: flex;
+     flex-direction: column;
+     background-image: linear-gradient(to bottom right, rgb(137, 5, 104), rgb(72, 19, 232));
+}
+
+.footer {
+     width: 100%;
+     height: 3%;
+     background-color: black;
+     color: white;
+     display: flex;
+     justify-content: center;
+     font-style: italic;
+}
+
+.menu-item {
+     display: flex;
+     font-size: 21px;
+     font-weight: 600;
+     color: white;
+     margin: 30px 0;
+     align-items: center;
+
+}
+
+.menu-item:hover .menu-item__content {
+     cursor: pointer;
+     background-color: rgb(0, 0, 0, 0.2);
+}
+
+.menu-item.active .menu-item__content{
+     background-color: white;
+     color: black;
+}
+
+.menu-item.active .menu-item__icon {
+     filter: invert(0);
+ 
+}
+
+.menu-item__space {
+     width: 10%;
+}
+.menu-item__content {
+     width:90%;
+     display: flex;
+     justify-content: space-around;
+     height: 100%;
+     padding: 25px 0 25px 20px;
+     border-top-left-radius: 20px;
+     border-bottom-left-radius: 20px;
+}
+.menu-item__icon {
+     padding-right: 30px;
+     width: 30%;
+     background-size: contain;
+     background-repeat: no-repeat;
+     height: 40px;
+     filter: invert(1);
+}
+.menu-item__name {
+     padding-right: 15px;
+     width: 70%;
+     display: flex;
+     align-items: center;
+     height: 100%;
+}
+
+.content__main {
+     width: 80%;
+     height: 100%;
+}
+.main-item {
+     width: 100%;
+     height: 100%;
+     display: none;
+}
+.main-item.active {
+     display: flex;
+}
+.main-item__sensor {
+     width: 60%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+}
+
+.main-item__sensor__table--humi-temp__boder {
+     width: 100%;
+     height: 40%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.main-item__sensor__table--humi-temp {
+     width: 80%;
+     height: 90%;
+     background-image: linear-gradient(to bottom right, rgb(137, 5, 104, 0.7), rgb(72, 19, 232, 0.7));
+     border-radius: 20px;
+     display: flex;
+}
+
+.main-item__sensor__table__left {
+     width: 70%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+}
+
+.main-item__sensor__table__right {
+     width: 30%;
+     height: 100%;
+     justify-content: center;
+     display: flex;
+     align-items: center;
+}
+.main-item__sensor__whether {
+     background-size: contain;
+     background-repeat: no-repeat;
+     width: 120px;
+     height: 120px;
+}
+.main-item__sensor__whether.sun {
+     background-image: url('./imgs/sensor_icon/temp_sun.png');
+}
+.main-item__sensor__whether.cloud {
+     background-image: url('./imgs/sensor_icon/temp_cloud.png');
+}
+
+.main-item__sensor__table--humi-temp__text {
+     color: yellow;
+     font-size: 30px;
+     font-weight: 900;
+     margin-top: 30px;
+     margin-left: 30px;
+}
+.main-item__sensor__table--humi-temp__time {
+     color: white;
+     font-size: 26px;
+     font-weight: 900;
+     
+     margin-top: 30px;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     font-style: italic;
+}
+
+.main-item__sensor__humi-temp {
+     display: flex;
+     width: 100%;
+     justify-content: center;
+     margin-top: 30px;
+}
+
+.main-item__sensor__humi, .main-item__sensor__temp {
+     display: flex;
+     height: 40px;
+     align-items: center;
+     justify-content: flex-end
+}
+
+.main-item__sensor__humi_icon {
+     background-image: url('./imgs/sensor_icon/humidity.png');
+}
+.main-item__sensor__temp_icon {
+     background-image: url('./imgs/sensor_icon/temparature.png');
+     filter:invert(1);
+}
+.main-item__sensor__humi_icon, .main-item__sensor__temp_icon {
+     background-size: cover;
+     width: 40px;
+     height: 40px;
+}
+.main-item__sensor__humi_value, .main-item__sensor__temp_value {
+     font-size: 28px;
+     font-weight: 900;
+     color: white;
+     margin-left: 20px;
+}
+.main-item__sensor__temp_value {
+     display: flex;
+}
+.main-item__sensor__temp_unit {
+     display: flex;
+}
+
+.main-item__sensor__humi-temp--boder {
+     width: 2px;
+     height: 40px;
+     background-color: white;
+     margin-left: 30px;
+     margin-right: 20px;
+}
+
+
+.main-item__sensor__gas_light {
+     display: flex;
+     width: 100%;
+     justify-content: space-around;
+     margin-top: 12%;
+}
+
+.main-item__sensor__gas, .main-item__sensor__light {
+     width: 40%;
+     height: 40%;
+}
+.main-item__sensor__title {
+     width: 100%;
+     font-size: 26px;
+     display: flex;
+     justify-content: center;
+     margin-top: 36px;
+     font-weight: 900;
+}
+
+.main-item__control {
+     width: 40%;
+     margin-left: 5px;
+}
+
+
+.main-item__control__title {
+     font-size: 30px;
+     font-weight: 800;
+     color: red;
+     margin-top: 12px;
+}
+
+.main-item__control__devices {
+     width: 98%;
+     height: 14%;
+     margin: 20px 0px;
+     border-radius: 10px;
+     display: flex;
+     align-items: center;
+
+     background-color: rgb(102, 102, 237, 0.6);   
+     ;
+}
+
+.main-item__control__devices_icon {
+     width: 16%;
+     height: 70%;
+     background-size: contain;
+     background-repeat: no-repeat;
+     margin-left: 10px;
+     
+}
+.main-item__control__devices_name {
+    font-size: 24px; 
+    font-weight: 900;
+    width: 50%;
+    padding-left: 20px;
+}
+
+.main-item__control__devices_control {
+     display: flex;
+     justify-content: flex-end;
+     width: 34%;
+     margin-right: 10px;
+     align-items: center;
+}
+.main-item__control__air_conditioner_controlValue {
+     display: flex;
+     flex-direction: column;
+     margin-right: 15px;
+     font-size: 20px;
+}
+
+.main-item__control__air_conditioner_high, .main-item__control__air_conditioner_low {
+     font-weight: 900; 
+}
+.main-item__control__air_conditioner_high:hover, .main-item__control__air_conditioner_low:hover {
+     cursor: pointer;
+}
+.main-item__control__buzzer_control__value {
+     font-size: 26px;
+     margin-right: 26px;
+}
+
+.main-item__control__fan_control {
+     display: flex;
+     justify-content: space-between;
+     font-size: 18px;
+     font-weight: 900;
+}
+
+.main-item__control__fan_btn {
+     background-color: #808080;
+     width: 42px;
+     height: 40px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 10px;
+}
+
+.main-item__control__fan_btn0 {
+     background-color: rgb(159, 6, 6);
+}
+.main-item__control__fan_btn:hover {
+     cursor: pointer;
+}
+
+.warning-container {
+     width: 100%;
+     height: 100vh;
+     background-color: rgb(0, 0, 0, 0.8);
+     position: absolute;
+     top: 0;
+     display: none;
+     justify-content: center;
+     align-items: center;
+}
+.warning-container.active {
+     display: flex;
+}
+
+.warning {
+     width: 40%;
+     height: 40%;
+     background-color: white;
+     border-radius: 20px;
+}
+.warning-title {
+     width: 100%;
+     height: 20%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 30px;
+     font-weight: 900;
+     color: red;
+     margin-top: 20px;
+}
+.warning-content {
+     width: 100%;
+     height: 80%;
+     padding: 30px;
+     font-size: 24px;
+     display: flex;
+     justify-content: center;
+     margin-top: 30px;
+     font-weight: 900;
+}

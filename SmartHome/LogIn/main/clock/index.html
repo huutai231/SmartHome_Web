@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Setup Time</title>
+     <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+     <div class="main-container">
+          <div class="main">
+               <div class="header">HẸN GIỜ TẮT CÁC THIẾT BỊ</div>
+               <div class="content">
+                    <div class="content-item livingroom">
+                         <div class="content-item__name">Phòng khách</div>
+                         <div class="content-item__setup-time">
+                              <input class="content-item__setup-time__hour" type="text" placeholder="Giờ">
+                              <input class="content-item__setup-tim__minute" type="text" placeholder="Phút">
+                              <input class="content-item__setup-time-second" type="text" placeholder="Giây">  
+                         </div>
+                    </div>
+
+                    <div class="content-item bedroom">
+                         <div class="content-item__name">Phòng ngủ</div>
+                         <div class="content-item__setup-time">
+                              <input class="content-item__setup-time__hour" type="text" placeholder="Giờ"></input>
+                              <input class="content-item__setup-tim__minute" type="text" placeholder="Phút"></input>
+                              <input class="content-item__setup-time-second" type="text" placeholder="Giây"></input>   
+                         </div>
+                    </div>
+
+                    <div class="content-item bedroom">
+                         <div class="content-item__name">Phòng bếp</div>
+                         <div class="content-item__setup-time">
+                              <input class="content-item__setup-time__hour" type="text" placeholder="Giờ"></input>
+                              <input class="content-item__setup-tim__minute" type="text" placeholder="Phút"></input>
+                              <input class="content-item__setup-time-second" type="text" placeholder="Giây"></input>   
+                         </div>
+                    </div>
+               </div>
+               <div class="comfirm">
+                    <div class="comfirm__btn">Xác nhận</div>
+               </div>
+          </div>
+     </div>
+
+     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script> 
+     <script src="./main.js"></script>
+</body>
+</html>

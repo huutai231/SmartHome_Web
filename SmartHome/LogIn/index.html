@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>LOGIN</title>
+     <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+     <div class="app3">
+          <div class="hidden">
+               <div class="login">
+                    <div class="header">LOGIN</div>
+                    <div class="content">
+                         <div class="input user">
+                              <div class="display-user">Tên đăng nhập</div>
+                              <input type="text" class="userNameInput">
+                         </div>
+                         <div class="input password">
+                              <div class="display-password">Mật khẩu</div>
+                              <input type="password" class="passInput">
+                         </div>
+                         <div class="login-btn-frame">
+                              <dive class="login-btn">Đăng nhập</dive>
+                         </div>
+                         
+                    </div>
+               </div>
+          </div>
+
+          <div class="error-pass--container">
+               <div class="error-pass">Sai mật khẩu !</div>
+          </div>
+     </div>
+
+     <a href="./main/index.html" class="SmartHome"></a>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script> 
+<script src="./main.js"></script>
+</html>
